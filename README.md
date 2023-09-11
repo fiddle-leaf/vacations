@@ -10,6 +10,7 @@ MERN app Vacation Planner using user authentication via login/signup page and SP
 ## Technology Used
 
 - React.js via `create-react-app`
+- React-Router for SPA structure
 - MongoDB
 - Express server
 - JTWebToken & BCrypt
