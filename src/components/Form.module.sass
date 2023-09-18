@@ -1,0 +1,82 @@
+@import 'https://fonts.googleapis.com/css2?family=Simonetta:ital,wght@0,400;0,900;1,400;1,900&display=swap'
+
+.signupForm
+    width: clamp(70vw, 75vw, 80vw)
+
+    .signup
+        display: flex
+        flex-flow: column nowrap
+        gap: 1rem
+
+    div
+        flex: 1
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        gap: calc( 1rem / 3 )
+
+    p
+        margin-block: 0
+        padding-block-end: 1rem
+
+    .password
+        gap: 1rem
+        display: grid
+        grid-template: repeat(2, 1fr)
+
+        div
+            display: flex
+            flex-flow: column nowrap
+            grid-column: span 2
+            gap: calc(1rem/4)
+
+    .name
+        input
+            grid-column: span 3
+
+    .email
+        @extend .name
+
+    .buttons
+        display: flex
+        gap: calc(1rem/3)
+
+.subtitle
+    font:
+        family: 'Simonetta', serif
+        size: 2.5rem
+        weight: 900
+        style: italic
+    margin-block: 0
+
+.loginForm,
+.signupForm
+    background: #e1f3f8
+    padding: 1rem
+    outline: 1px solid #0d7ea2
+    border-radius: 2px
+
+    input
+        outline: 1px solid #0d7ea2
+        border: 0
+
+.loginForm
+    margin: 0 auto
+
+    .login
+        width: clamp(50vw, 60vw, 70vw)
+        display: flex
+        flex-flow: column nowrap
+        gap: 1rem
+
+    div
+        display: flex
+        flex-flow: row wrap
+        gap: calc(1rem/4)
+        flex: 1
+
+        .email
+            flex: 1
+            display: grid
+
+        .password
+            @extend .email
