@@ -31,71 +31,69 @@ export default function SignupForm() {
     });
   };
   return (
-    <>
-      <div className={styles.signupForm}>
-        <h3 className="subtitle">Sign Up to plan your next vacation.</h3>
-        <form
-          autoComplete="off"
-          onSubmit={handleSubmit}
-          className={styles.signup}
-        >
-          <div className={styles.name}>
-            <label>Name</label>
+    <div className={styles.signupForm}>
+      <h3 className="subtitle">Sign Up to plan your next vacation.</h3>
+      <form
+        autoComplete="off"
+        onSubmit={handleSubmit}
+        className={styles.signup}
+      >
+        <div className={styles.name}>
+          <label>Name</label>
+          <input
+            type="text"
+            name="name"
+            value={userData.name}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className={styles.email}>
+          <label>Email</label>
+          <input
+            type="email"
+            name="email"
+            value={userData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className={styles.password}>
+          <div>
+            <label>Password</label>
             <input
-              type="text"
-              name="name"
-              value={userData.name}
+              type="password"
+              name="password"
+              value={userData.password}
               onChange={handleChange}
               required
             />
           </div>
-          <div className={styles.email}>
-            <label>Email</label>
+          <div>
+            <label>Confirm</label>
             <input
-              type="email"
-              name="email"
-              value={userData.email}
+              type="password"
+              name="confirm"
+              value={userData.confirm}
               onChange={handleChange}
               required
             />
           </div>
-          <div className={styles.password}>
-            <div>
-              <label>Password</label>
-              <input
-                type="password"
-                name="password"
-                value={userData.password}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div>
-              <label>Confirm</label>
-              <input
-                type="password"
-                name="confirm"
-                value={userData.confirm}
-                onChange={handleChange}
-                required
-              />
-            </div>
-          </div>
-          <div className={styles.buttons}>
-            <button type="submit" className={styles.primary}>
-              SIGN UP
-            </button>
-            <button
-              type="reset"
-              onClick={handleReset}
-              className={styles.secondary}
-            >
-              Reset
-            </button>
-          </div>
-        </form>
-      </div>
+        </div>
+        <div className={styles.buttons}>
+          <button type="submit" className={styles.primary}>
+            SIGN UP
+          </button>
+          <button
+            type="reset"
+            onClick={handleReset}
+            className={styles.secondary}
+          >
+            Reset
+          </button>
+        </div>
+      </form>
       <p>{userData.error}</p>
-    </>
+    </div>
   );
 }

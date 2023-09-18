@@ -1,8 +1,13 @@
+@import '../pages/_defaults'
 
 .signupForm
-    width: clamp(50vw, 60vw, 70vw)
+    flex: 0 0 1
+    display: flex
+    flex-flow: column nowrap
+    align-items: flex-start
 
     .signup
+        width: 100%
         display: flex
         flex-flow: column nowrap
         gap: 1rem
@@ -42,21 +47,19 @@
 .loginForm,
 .signupForm
     color: #fff
-    background: #2e6276
+    background: $form
     padding: 1.5rem
-    box-shadow: 2px 2px 0px #adcfdc
-    //outline: 1px solid #6499af
-    border-radius: 4px
+    box-shadow: 2px 2px 0px $shadow
+    border-radius: 2px
 
     label
         font-weight: 700
     input
-        outline: 1px solid #e1f3f8
+        outline: 2px solid $input
+        border-radius: 1px
         border: 0
 
 .loginForm
-    margin: 0 auto
-    width: clamp(50vw, 60vw, 70vw)
 
     .login
         display: flex
@@ -88,10 +91,10 @@
 
 .primary
     @extend .buttons
-    background: #82b4c9
-    color: #0f191c
+    background: $primary
+    color: $color
 
 .secondary
     @extend .buttons
-    background: none
-    color: #fff
+    background: $secondary
+    color: #000

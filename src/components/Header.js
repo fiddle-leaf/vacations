@@ -1,10 +1,9 @@
 import NavBar from "./NavBar";
 
-export default function Header({ user }) {
+export default function Header() {
   return (
     <header>
-      {user ? <NavBar /> : false}
-      <h1 class="title">Vacation Planner</h1>
+      <NavBar />
     </header>
   );
 }

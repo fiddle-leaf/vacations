@@ -1,0 +1,22 @@
+@import '../_defaults'
+
+.App
+    @include flex(column nowrap)
+    min-height: 100vh
+
+    font:
+        family: $font
+        size: $size
+
+    header,
+    footer
+        flex: 0
+
+    footer>p
+        text-align: center
+
+        a
+            color: $form
+
+    main
+        flex: 1

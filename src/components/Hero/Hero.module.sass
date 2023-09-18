@@ -1,0 +1,38 @@
+@import '../../pages/_defaults'
+@counter-style list
+    system: fixed
+    symbols: '\1F305' '\26C5' '\1F510' '\1F4DD'
+    suffix: " "
+
+.hero
+    @include flex(column nowrap)
+    justify-content: center
+    align-items: center
+    height: 60vh
+    background:
+        color: #ffbc78
+        image: url('https://i.imgur.com/ljAqIOU.jpg')
+        size: cover
+        width: 100%
+
+    h1 /*title*/
+        //margin-block: 1rem
+        font:
+            family: $heading
+            size: 5rem
+            weight: 400
+
+    ul /*info*/
+        background: #fff
+        list-style: list
+        max-width: 50%
+        height: auto
+        margin-block: 0
+        padding-block: 1rem
+        padding-inline: 2rem
+        border-radius: 2px
+
+        h4
+            font-size: 1.2rem
+            margin-block: 0
+            padding: calc(1rem/4)
