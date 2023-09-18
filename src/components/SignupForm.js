@@ -33,8 +33,7 @@ export default function SignupForm() {
   return (
     <>
       <div className={styles.signupForm}>
-        {/*<h3 className={styles.subtitle}>Plan Your Vacations</h3>*/}
-        <p>Sign Up to save your data!</p>
+        <h3 className="subtitle">Sign Up to plan your next vacation.</h3>
         <form
           autoComplete="off"
           onSubmit={handleSubmit}
@@ -83,10 +82,14 @@ export default function SignupForm() {
             </div>
           </div>
           <div className={styles.buttons}>
-            <button type="submit" disabled>
+            <button type="submit" className={styles.primary}>
               SIGN UP
             </button>
-            <button type="reset" onClick={handleReset}>
+            <button
+              type="reset"
+              onClick={handleReset}
+              className={styles.secondary}
+            >
               Reset
             </button>
           </div>

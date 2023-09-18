@@ -1,7 +1,6 @@
-@import 'https://fonts.googleapis.com/css2?family=Simonetta:ital,wght@0,400;0,900;1,400;1,900&display=swap'
 
 .signupForm
-    width: clamp(70vw, 75vw, 80vw)
+    width: clamp(50vw, 60vw, 70vw)
 
     .signup
         display: flex
@@ -27,7 +26,7 @@
             display: flex
             flex-flow: column nowrap
             grid-column: span 2
-            gap: calc(1rem/4)
+            gap: calc(1rem/2)
 
     .name
         input
@@ -38,32 +37,28 @@
 
     .buttons
         display: flex
-        gap: calc(1rem/3)
-
-.subtitle
-    font:
-        family: 'Simonetta', serif
-        size: 2.5rem
-        weight: 900
-        style: italic
-    margin-block: 0
+        gap: calc(1rem/2)
 
 .loginForm,
 .signupForm
-    background: #e1f3f8
-    padding: 1rem
-    outline: 1px solid #0d7ea2
-    border-radius: 2px
+    color: #fff
+    background: #2e6276
+    padding: 1.5rem
+    box-shadow: 2px 2px 0px #adcfdc
+    //outline: 1px solid #6499af
+    border-radius: 4px
 
+    label
+        font-weight: 700
     input
-        outline: 1px solid #0d7ea2
+        outline: 1px solid #e1f3f8
         border: 0
 
 .loginForm
     margin: 0 auto
+    width: clamp(50vw, 60vw, 70vw)
 
     .login
-        width: clamp(50vw, 60vw, 70vw)
         display: flex
         flex-flow: column nowrap
         gap: 1rem
@@ -71,12 +66,32 @@
     div
         display: flex
         flex-flow: row wrap
-        gap: calc(1rem/4)
+        gap: 1rem
         flex: 1
 
         .email
             flex: 1
             display: grid
+            gap: calc( 1rem / 2 )
 
         .password
             @extend .email
+
+.buttons
+    align-self: flex-end
+
+    button
+        font-weight: 500
+        text-transform: uppercase
+        border: 0
+        padding: calc( 1rem /2 )
+
+.primary
+    @extend .buttons
+    background: #82b4c9
+    color: #0f191c
+
+.secondary
+    @extend .buttons
+    background: none
+    color: #fff

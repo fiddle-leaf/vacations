@@ -21,6 +21,7 @@ export default function LoginForm() {
   return (
     <>
       <div className={styles.loginForm}>
+        <h3 className="subtitle">Login</h3>
         <form
           autoComplete="off"
           onSubmit={handleSubmit}
@@ -48,8 +49,10 @@ export default function LoginForm() {
               />
             </div>
           </div>
-          <div>
-            <button type="submit">LOG IN</button>
+          <div className={styles.buttons}>
+            <button type="submit" className={styles.primary}>
+              LOG IN
+            </button>
           </div>
         </form>
       </div>
