@@ -3,7 +3,7 @@ import styles from "./Hero.module.sass";
 export default function Hero() {
   return (
     <div className={styles.hero}>
-      <h1 class="title">Vacation Planner</h1>
+      <h1 className="title">Vacation Planner</h1>
       <ul className="info">
         <li>
           <h4 className="details">Input flight details</h4>

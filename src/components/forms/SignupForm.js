@@ -1,7 +1,13 @@
 import { useState } from "react";
 import styles from "./Form.module.sass";
+import { useSelector, useDispatch } from "react-redux";
+import { currentUser, loggedIn, signedUp } from "../../userSlice";
 
 export default function SignupForm() {
+  const user = useSelector(currentUser);
+  const dispatch = useDispatch();
+  console.log(user);
+
   const [userData, setUserData] = useState({
     name: "",
     email: "",
@@ -12,14 +18,23 @@ export default function SignupForm() {
 
   const handleChange = (e) => {
     setUserData({
+      ...userData,
       [e.target.name]: e.target.value,
       error: "",
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     //create async function to submit data to db
     e.preventDefault();
+    try {
+      const formData = { ...userData };
+      delete formData.error;
+      delete formData.confirm;
+      dispatch(signedUp(formData));
+    } catch {
+      setUserData({ error: "Sign up failed. Try again!" });
+    }
   };
   const handleReset = () => {
     setUserData({

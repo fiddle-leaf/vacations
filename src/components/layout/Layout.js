@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
-import FooBar from "../../components/FooBar";
+import FooBar from "./FooBar";
 import styles from "./Layout.module.sass";
-import Header from "../../components/Header";
-import Hero from "../../components/Hero/Hero";
+import Header from "./Header";
+import Hero from "../Hero/Hero";
 export default function Layout({ user }) {
   return (
     <div className={styles.App}>
