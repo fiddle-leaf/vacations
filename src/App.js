@@ -10,19 +10,21 @@ import Header from "./components/header/Header";
 
 function App() {
   const [user, setUser] = useState(getUser());
+
   return (
     <Layout>
       {user ? (
         <>
-          <Header />
+          <Header user={user} setUser={setUser} />
           <Routes>
-            <Route index element={<Home />} />
-            <Route path="/vacations" element={<VacationHistory />} />
-            <Route path="/vacations/new" element={<NewVacation />} />
+            <Route path="/" element={<Home />}>
+              <Route path="/vacations" element={<VacationHistory />} />
+              <Route path="/vacations/new" element={<NewVacation />} />
+            </Route>
           </Routes>
         </>
       ) : (
-        <AuthPage />
+        <AuthPage setUser={setUser} />
       )}
     </Layout>
   );

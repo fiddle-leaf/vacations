@@ -1,5 +1,5 @@
-import { signUp } from "./users-service";
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+//import { signUp } from "./users-service";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   user: {},
@@ -7,10 +7,11 @@ const initialState = {
   status: "idle",
 };
 
-export const signedUp = createAsyncThunk("user/signedUp", async (data) => {
+/*export const signedUp = createAsyncThunk("user/signedUp", async (data) => {
   const user = await signUp(data);
   console.log(user);
-});
+  return user;
+});*/
 
 const userSlice = createSlice({
   name: "user",
@@ -19,16 +20,6 @@ const userSlice = createSlice({
     loggedIn(state, action) {
       state.user = action.payload;
     },
-  },
-  extraReducers: (builder) => {
-    builder
-      .addCase(signedUp.pending, (state, action) => {
-        state.status = "loading";
-      })
-      .addCase(signedUp.fulfilled, (state, action) => {
-        state.user = action.payload;
-        state.status = "idle";
-      });
   },
 });
 

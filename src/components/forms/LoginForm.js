@@ -1,22 +1,33 @@
 import { useState } from "react";
+import * as usersService from "../../utilities/users-service";
 import styles from "./Form.module.sass";
 
-export default function LoginForm() {
+export default function LoginForm({ setUser }) {
   const [credentials, setCredentials] = useState({
     email: "",
     password: "",
   });
+  const [error, setError] = useState("");
 
   function handleChange(e) {
     setCredentials({
       ...credentials,
       [e.target.name]: e.target.value,
     });
-    //setError('');
+    setError("");
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault(); //prevent form from being submit to server
+    try {
+      // The promise returned by the signUp service method
+      // will resolve to the user object included in the
+      // payload of the JSON Web Token (JWT)
+      const user = await usersService.login(credentials);
+      setUser(user);
+    } catch {
+      setError("Log In Failed - Try Again");
+    }
   }
   return (
     <div className={styles.loginForm}>
@@ -50,7 +61,7 @@ export default function LoginForm() {
           </button>
         </div>
       </form>
-      {/*<p className="error-message">&nbsp;{error}</p>*/}
+      <p className="error-message">&nbsp;{error}</p>
     </div>
   );
 }

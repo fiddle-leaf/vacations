@@ -1,12 +1,11 @@
 import { useState } from "react";
 import styles from "./Form.module.sass";
-import { useSelector, useDispatch } from "react-redux";
-import { currentUser, loggedIn, signedUp } from "../../utilities/userSlice";
+import { useDispatch } from "react-redux";
 
-export default function SignupForm() {
-  const user = useSelector(currentUser);
-  const dispatch = useDispatch();
-  //console.log(user);
+import { signUp } from "../../utilities/users-service";
+
+export default function SignupForm({ setUser }) {
+  //const dispatch = useDispatch();
 
   const [userData, setUserData] = useState({
     name: "",
@@ -31,7 +30,9 @@ export default function SignupForm() {
       const formData = { ...userData };
       delete formData.error;
       delete formData.confirm;
-      dispatch(signedUp(formData));
+
+      const user = await signUp(formData);
+      setUser(user);
     } catch {
       setUserData({ error: "Sign up failed. Try again!" });
     }

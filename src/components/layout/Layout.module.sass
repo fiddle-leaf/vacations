@@ -3,10 +3,41 @@
 .App
     @include flex(column nowrap)
     min-height: 100vh
-
     font:
         family: $font
         size: $size
+
+    a
+        color: $form
+
+    header
+        background: $header
+        @include flex(row wrap)
+        align-items: center
+        border-bottom: 1px solid $shadow
+
+        h3
+            flex: 1
+            text:
+                transform: capitalize
+                align: center
+                decoration: $form wavy underline 2px
+                decoration-skip-ink: none
+    nav
+        flex: 3
+
+        ul
+            @include flex(row wrap)
+            list-style: none
+            gap: 1rem
+            justify-content: space-evenly
+
+            li
+                flex: 1 auto
+
+                a
+                    font-weight: 700
+                    text-decoration: none
 
     header,
     footer
@@ -14,9 +45,6 @@
 
     footer>p
         text-align: center
-
-        a
-            color: $form
 
     main
         @include flex(column nowrap)
