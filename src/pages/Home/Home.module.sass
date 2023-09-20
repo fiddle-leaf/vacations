@@ -1,2 +1,58 @@
+@import '../../components/layout/_defaults'
 .homepage
-    padding: 1rem
+    min-height: 100vh
+    @include flex(column nowrap)
+
+header
+    background: $header
+    @include flex(row wrap)
+    align-items: center
+    border-bottom: 1px solid $shadow
+
+    h3
+        margin-block: 1rem
+        flex: 1
+        font:
+            family: $heading
+            size: 1.5rem
+        text:
+            transform: capitalize
+            align: center
+            decoration: $form wavy underline 2px
+            decoration-skip-ink: none
+
+footer
+    background: $header
+    border-top: 1px solid $shadow
+
+    a
+        font-weight: 500
+        text-decoration-color: $color
+
+.vacations
+    flex: 1
+    @include flex(row wrap)
+
+    aside
+        background: $sidebar
+        flex: 1
+        border-right: 1px solid $shadow
+
+        p
+            margin-block: calc(1rem/2)
+            font-size: 0.8rem
+            text-align: center
+            line-height: 150%
+
+    article
+        flex: 2
+
+.subtitle
+    margin-block-end: 0
+    font:
+        family: $heading
+        size: 2rem
+
+    text:
+        transform: capitalize
+        align: center

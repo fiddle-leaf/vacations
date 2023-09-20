@@ -5,7 +5,6 @@ export default function Layout({ children }) {
   return (
     <div className={styles.App}>
       <main>{children}</main>
-      <FooBar />
     </div>
   );
 }

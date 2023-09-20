@@ -1,7 +1,11 @@
 @import '../components/layout/_defaults'
 
 .auth
-    min-height: 80vh
+    flex: 1
     @include flex(column nowrap)
     align-items: center
-    justify-content: space-around
+    justify-content: flex-start
+
+.forms
+    flex: 2
+    @include flex(column nowrap)
