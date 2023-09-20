@@ -28,7 +28,7 @@ MERN app Vacation Planner using user authentication via login/signup page and SP
 
 ## Future Enhancements
 
-- Use redux store to save universal
+- Use redux store to save universal user
 - Change static pages to dynamic information for flight, add-ons, to-dos, and notes
 - Drag & drop feature for add-ons into 'vacation' cart
 - Add API for forecast of destination

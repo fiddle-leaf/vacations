@@ -1,3 +1,10 @@
 export default function NewVacation() {
-  return <h2>NewVacation</h2>;
+  return (
+    <div class="form-container">
+      <h2>New Vacation Details</h2>
+      <form>
+        
+      </form>
+    </div>
+  );
 }
