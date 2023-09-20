@@ -1,12 +1,12 @@
 import { useState } from "react";
 import styles from "./Form.module.sass";
 import { useSelector, useDispatch } from "react-redux";
-import { currentUser, loggedIn, signedUp } from "../../userSlice";
+import { currentUser, loggedIn, signedUp } from "../../utilities/userSlice";
 
 export default function SignupForm() {
   const user = useSelector(currentUser);
   const dispatch = useDispatch();
-  console.log(user);
+  //console.log(user);
 
   const [userData, setUserData] = useState({
     name: "",

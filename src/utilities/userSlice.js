@@ -1,9 +1,5 @@
-import { signUp } from "./utilities/users-service";
-import {
-  createSlice,
-  createAsyncThunk,
-  createEntityAdapter,
-} from "@reduxjs/toolkit";
+import { signUp } from "./users-service";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 const initialState = {
   user: {},
@@ -38,6 +34,6 @@ const userSlice = createSlice({
 
 export const { loggedIn } = userSlice.actions;
 
-export const currentUser = (state) => state;
+export const currentUser = (state) => state.user;
 
 export default userSlice.reducer;

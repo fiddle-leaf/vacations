@@ -1,17 +1,9 @@
-import { Outlet } from "react-router-dom";
-import FooBar from "./FooBar";
 import styles from "./Layout.module.sass";
-import Header from "./Header";
-import Hero from "../Hero/Hero";
-export default function Layout({ user }) {
+
+export default function Layout({ children }) {
   return (
     <div className={styles.App}>
-      {user ? <Header /> : false}
-      <main>
-        <Hero />
-        <Outlet />
-      </main>
-      <FooBar />
+      <main>{children}</main>
     </div>
   );
 }
