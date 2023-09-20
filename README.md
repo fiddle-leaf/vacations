@@ -15,7 +15,7 @@ MERN app Vacation Planner using user authentication via login/signup page and SP
 - Express server
 - JTWebToken & BCrypt
 - Morgan for debugging
-- Normalize.css
+- Normalize.css & Sass modules
 
 ## Getting Started
 
