@@ -1,10 +1,6 @@
 @import '../layout/_defaults'
 
 .signupForm
-    flex: 0 0 1
-    display: flex
-    flex-flow: column nowrap
-    align-items: flex-start
 
     .signup
         width: 100%
@@ -12,7 +8,9 @@
         flex-flow: column nowrap
         gap: 1rem
 
-    div
+    .name,
+    .email,
+    .password
         flex: 1
         display: grid
         grid-template-columns: repeat(4, 1fr)
@@ -40,12 +38,9 @@
     .email
         @extend .name
 
-    .buttons
-        display: flex
-        gap: calc(1rem/2)
-
 .loginForm,
 .signupForm
+    max-width: 60vw
     color: #fff
     background: $form
     padding: 1.5rem
@@ -58,6 +53,13 @@
         outline: 2px solid $input
         border-radius: 1px
         border: 0
+
+    .text
+        flex: 1
+        font-size: 0.8rem
+        a
+            color: $shadow
+            font-weight: 600
 
 .loginForm
 
@@ -81,7 +83,10 @@
             @extend .email
 
 .buttons
-    align-self: flex-end
+    flex: 0 auto
+    display: flex
+    gap: calc(1rem/2)
+    align-items: center
 
     button
         font-weight: 500

@@ -3,8 +3,9 @@ import styles from "./Form.module.sass";
 import { useDispatch } from "react-redux";
 
 import { signUp } from "../../utilities/users-service";
+import { Link } from "react-router-dom";
 
-export default function SignupForm({ setUser }) {
+export default function SignupForm({ setUser, setLogin }) {
   //const dispatch = useDispatch();
 
   const [userData, setUserData] = useState({
@@ -97,6 +98,14 @@ export default function SignupForm({ setUser }) {
           </div>
         </div>
         <div className={styles.buttons}>
+          <span class={styles.text}>
+            Already have an account?
+            <br />
+            <Link to="/" onClick={() => setLogin(true)}>
+              Login
+            </Link>
+            &nbsp;here.
+          </span>
           <button type="submit" className={styles.primary}>
             SIGN UP
           </button>
