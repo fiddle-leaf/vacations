@@ -1,5 +1,6 @@
 import { redirect } from "@remix-run/node";
 import { Form } from "@remix-run/react";
+import { useState } from "react";
 
 //`action` fx handles the request.
 export const action = async ({ request }) => {
@@ -9,6 +10,14 @@ export const action = async ({ request }) => {
 };
 
 export default function NewVacation() {
+  const [transport, setTransport] = useState({
+    mode: "",
+  });
+
+  function handleChange(e) {
+    setTransport.mode({ [e.target.value]: e.target.value });
+    console.log(e.target.name);
+  }
   return (
     <article>
       <h2>New Vacation</h2>
@@ -19,11 +28,11 @@ export default function NewVacation() {
           !response ? e.preventDefault : null;
         }}
       >
-        <div className="form-header">
+        <div className="heder">
           <span>
             <label htmlFor="name">
-              Vacation Name:&nbsp;
-              <input type="text" name="name" id="name" />
+              Vacation Name:&nbp;
+              <input type="text" name="name" id="name" />{" "}
             </label>
           </span>
           <span>
@@ -32,6 +41,66 @@ export default function NewVacation() {
               <input type="number" name="budget" id="budget" />
             </label>
           </span>
+        </div>
+        <div className="boy">
+          <h3>Transportation Details</h3>
+          <div>
+            <label htmlFor="">
+              <input
+                type="radio"
+                name="mode"
+                id="airplane"
+                value="airplane"
+                onChange={handleChange}
+                checked={transport.mode === "airplane"}
+              />
+              Airplane
+            </label>
+            <label htmlFor="">
+              <input
+                type="radio"
+                name="mode"
+                id="bus"
+                value="bus"
+                onChange={handleChange}
+                checked={transport.mode === "bus"}
+              />
+              Bus
+            </label>
+            <label htmlFor="">
+              <input
+                type="radio"
+                name="mode"
+                id="train"
+                value="train"
+                onChange={handleChange}
+                checked={transport.mode === "train"}
+              />
+              Train
+            </label>
+            <label htmlFor="">
+              <input
+                type="radio"
+                name="mode"
+                id="car"
+                value="car"
+                onChange={handleChange}
+                checked={transport.mode === "car"}
+              />
+              Car
+            </label>
+            <label htmlFor="">
+              <input
+                type="radio"
+                name="mode"
+                id="other"
+                value="other"
+                onChange={handleChange}
+                checked={transport.mode === "other"}
+              />
+              Other
+            </label>
+          </div>
         </div>
         <div>
           <input type="submit" value="Create New Vacation" />
