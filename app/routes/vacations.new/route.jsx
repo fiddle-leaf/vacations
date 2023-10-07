@@ -1,8 +1,8 @@
 import { redirect } from "@remix-run/node";
 import { Form } from "@remix-run/react";
 import { useState } from "react";
-import Travel from "../components/Travel";
-import AddOns from "../components/AddOns";
+import Travel from "../../components/Travel";
+import AddOns from "../../components/AddOns";
 
 //`action` fx handles the request.
 export const action = async ({ request }) => {

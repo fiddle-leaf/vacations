@@ -1,4 +1,5 @@
 import { Outlet } from "@remix-run/react";
+import Layout from "../../components/Layout";
 
 //`loader` provides data to route component
 export const loader = async () => {
@@ -7,9 +8,9 @@ export const loader = async () => {
 
 export default function Vacations() {
   return (
-    <article>
-      <h2>Route for Vacations</h2>
+    <Layout>
+      <h2>Plan_It</h2>
       <Outlet />
-    </article>
+    </Layout>
   );
 }

@@ -1,7 +1,8 @@
 import * as React from "react";
-import { Link, Links, LiveReload, Meta, Outlet } from "@remix-run/react";
+import { Links, LiveReload, Meta, Outlet } from "@remix-run/react";
 import mainStylesheet from "./app.css";
 import favicon from "./favicon.ico";
+import Layout from "./components/Layout";
 
 export const meta = () => {
   return [
@@ -33,17 +34,6 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <h1>Vacation Planner</h1>
-        <nav>
-          <ul>
-            <li>
-              <Link to={`/vacations`}>Home</Link>
-            </li>
-            <li>
-              <Link to={`/vacations/new`}>New Vacation</Link>
-            </li>
-          </ul>
-        </nav>
         <Outlet />
         <LiveReload />
       </body>
