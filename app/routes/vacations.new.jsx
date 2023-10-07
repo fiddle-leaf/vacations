@@ -1,6 +1,8 @@
 import { redirect } from "@remix-run/node";
 import { Form } from "@remix-run/react";
 import { useState } from "react";
+import Travel from "../components/Travel";
+import AddOns from "../components/AddOns";
 
 //`action` fx handles the request.
 export const action = async ({ request }) => {
@@ -28,11 +30,11 @@ export default function NewVacation() {
           !response ? e.preventDefault : null;
         }}
       >
-        <div className="heder">
+        <div className="header">
           <span>
             <label htmlFor="name">
-              Vacation Name:&nbp;
-              <input type="text" name="name" id="name" />{" "}
+              Vacation Name:&nbsp;
+              <input type="text" name="name" id="name" />
             </label>
           </span>
           <span>
@@ -101,6 +103,11 @@ export default function NewVacation() {
               Other
             </label>
           </div>
+        </div>
+        <Travel />
+        <div>
+          <h3>Add Ons</h3>
+          <AddOns />
         </div>
         <div>
           <input type="submit" value="Create New Vacation" />
