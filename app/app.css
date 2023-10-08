@@ -1,7 +1,32 @@
 /* IMPORTS */
-@import "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap";
-@import "https://fonts.googleapis.com/css2?family=Red+Rose:wght@300;400;500;600;700&display=swap";
+@import 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Red+Rose:wght@300;400;500;600;700&display=swap';
+/* DISPLAY MODULE */
+/* MIXINS */
+/* PADDING BIT */
 body {
+  box-sizing: border-box;
+  margin-block: 0;
+}
+
+/* PAGE COLORS */
+/* LAYOUT STYLING */
+div.page {
+  display: flex;
+  gap: 1rem;
+  flex-flow: column nowrap;
+  height: 100vh;
+}
+div.page header,
+div.page footer {
+  flex: 0;
+}
+div.page main.body {
+  flex: 1;
+}
+
+body {
+  line-height: 125%;
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 body h1 {

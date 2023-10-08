@@ -3,6 +3,24 @@
 
 /* app/app.css */
 body {
+  box-sizing: border-box;
+  margin-block: 0;
+}
+div.page {
+  display: flex;
+  gap: 1rem;
+  flex-flow: column nowrap;
+  height: 100vh;
+}
+div.page header,
+div.page footer {
+  flex: 0;
+}
+div.page main.body {
+  flex: 1;
+}
+body {
+  line-height: 125%;
   font-family: Plus Jakarta Sans, sans-serif;
 }
 body h1 {

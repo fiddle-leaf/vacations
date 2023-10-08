@@ -1,7 +1,8 @@
 import { Link } from "@remix-run/react";
+
 export default function Layout({ children }) {
   return (
-    <>
+    <div className="page">
       <header>
         <h1>Vacation Planner</h1>
         <nav>
@@ -18,10 +19,10 @@ export default function Layout({ children }) {
           </ul>
         </nav>
       </header>
-      {children}
+      <main className="body">{children}</main>
       <footer>
-        <p>coded by fiddle.leaf &copy; 2023</p>
+        <p>fiddle-leaf &copy; 2023</p>
       </footer>
-    </>
+    </div>
   );
 }

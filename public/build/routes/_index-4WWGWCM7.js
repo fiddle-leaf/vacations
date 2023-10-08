@@ -29,7 +29,7 @@ if (import.meta) {
     //@ts-expect-error
     "app/routes/_index/route.jsx"
   );
-  import.meta.hot.lastModified = "1696645647294.3235";
+  import.meta.hot.lastModified = "1696646893337.3574";
 }
 function Page() {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("h2", { children: "Home" }, void 0, false, {
@@ -46,4 +46,4 @@ window.$RefreshSig$ = prevRefreshSig;
 export {
   Page as default
 };
-//# sourceMappingURL=/build/routes/_index-V2SDFK7C.js.map
+//# sourceMappingURL=/build/routes/_index-4WWGWCM7.js.map

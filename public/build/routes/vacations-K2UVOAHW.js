@@ -1,6 +1,6 @@
 import {
   Layout
-} from "/build/_shared/chunk-W7N4WDFU.js";
+} from "/build/_shared/chunk-KXOYKH2B.js";
 import {
   Outlet
 } from "/build/_shared/chunk-QB6BDX2D.js";
@@ -35,9 +35,9 @@ if (import.meta) {
     //@ts-expect-error
     "app/routes/vacations/route.jsx"
   );
-  import.meta.hot.lastModified = "1696645650595.285";
+  import.meta.hot.lastModified = "1696732740768.8303";
 }
-function Vacations() {
+function Landing() {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Layout, { children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("h2", { children: "Plan_It" }, void 0, false, {
       fileName: "app/routes/vacations/route.jsx",
@@ -55,12 +55,12 @@ function Vacations() {
     columnNumber: 10
   }, this);
 }
-_c = Vacations;
+_c = Landing;
 var _c;
-$RefreshReg$(_c, "Vacations");
+$RefreshReg$(_c, "Landing");
 window.$RefreshReg$ = prevRefreshReg;
 window.$RefreshSig$ = prevRefreshSig;
 export {
-  Vacations as default
+  Landing as default
 };
-//# sourceMappingURL=/build/routes/vacations-IBLOONIX.js.map
+//# sourceMappingURL=/build/routes/vacations-K2UVOAHW.js.map

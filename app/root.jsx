@@ -2,7 +2,7 @@ import * as React from "react";
 import { Links, LiveReload, Meta, Outlet } from "@remix-run/react";
 import mainStylesheet from "./app.css";
 import favicon from "./favicon.ico";
-import Layout from "./components/Layout";
+import Layout from "./components/layout/Layout";
 
 export const meta = () => {
   return [
@@ -17,12 +17,7 @@ export const meta = () => {
 };
 
 export const links = () => {
-  return [
-    {
-      rel: "stylesheet",
-      href: mainStylesheet,
-    },
-  ];
+  return [{ rel: "stylesheet", href: mainStylesheet }];
 };
 
 export default function App() {

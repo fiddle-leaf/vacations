@@ -1,24 +1,19 @@
-/**
-    DISPLAY MODULE
-        flex, media queries, and padding styling
+/* DISPLAY MODULE
+// flex, media queries, and padding styling
 
-/** 
-    MIXINS
+/* MIXINS
     
-/**
-    Flex: add flex view for components
-- flex($flow, $gap)
+// Flex add flex view for components
+= flex($flow, $gap)
     display: flex
     gap: $bit
     flex-flow: $flow
 
-/**
-    Cushion: add bits of padding depending on bit unit
-- cushion($pillow)
-    return cacl($bit/$pillow)
+// Cushion: add bits of padding depending on bit unit
+= cushion($pillow)
+    padding: cacl($bit/$pillow)
 
-/**
-    PADDING BIT
+/* PADDING BIT
 $bit: 1rem
 
 body
