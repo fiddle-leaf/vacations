@@ -1,4 +1,4 @@
-import "/build/_shared/chunk-6OBTWLAV.js";
+import "/build/_shared/chunk-2IU4KMHW.js";
 import {
   Links,
   LiveReload,
@@ -23,7 +23,7 @@ import {
 var React = __toESM(require_react(), 1);
 
 // app/app.css
-var app_default = "/build/_assets/app-EQ6PJVP7.css";
+var app_default = "/build/_assets/app-JH2UOYJQ.css";
 
 // app/root.jsx
 var import_jsx_dev_runtime = __toESM(require_jsx_dev_runtime(), 1);
@@ -117,4 +117,4 @@ export {
   links,
   meta
 };
-//# sourceMappingURL=/build/root-YDB5LXLM.js.map
+//# sourceMappingURL=/build/root-WMTZLRQP.js.map

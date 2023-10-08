@@ -31,6 +31,7 @@ div.page footer.foo-bar {
 }
 div.page main.body {
   flex: 1;
+  background: grey;
 }
 
 body {

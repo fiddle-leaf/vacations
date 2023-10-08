@@ -23,12 +23,7 @@ export default function Layout({ children }) {
         </nav>
       </header>
 
-      <main className="body">
-        <div className="columns">
-          <Sidebar />
-          {children}
-        </div>
-      </main>
+      <main className="body">{children}</main>
       <footer className="foo-bar">
         <p>fiddle-leaf &copy; 2023</p>
       </footer>
