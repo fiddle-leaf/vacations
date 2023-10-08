@@ -1,12 +1,15 @@
 import { Link } from "@remix-run/react";
+import Sidebar from "../Sidebar";
 
 export default function Layout({ children }) {
   return (
     <div className="page">
-      <header>
-        <h1>Vacation Planner</h1>
+      <header className="top-bar">
+        <div>
+          <h1>Vacation Planner</h1>
+        </div>
         <nav>
-          <ul>
+          <ul className="links">
             <li>
               <Link to={`/vacations`}>Home</Link>
             </li>
@@ -19,8 +22,14 @@ export default function Layout({ children }) {
           </ul>
         </nav>
       </header>
-      <main className="body">{children}</main>
-      <footer>
+
+      <main className="body">
+        <div className="columns">
+          <Sidebar />
+          {children}
+        </div>
+      </main>
+      <footer className="foo-bar">
         <p>fiddle-leaf &copy; 2023</p>
       </footer>
     </div>

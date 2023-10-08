@@ -1,14 +1,21 @@
 @use './_base' as *
 
 /* LAYOUT STYLING
+.columns
+    @include flex(row wrap, $bit)
 
 div.page
-    @include flex(column nowrap, $bit)
-    height: 100vh
+    @include flex(column nowrap, 0)
+    min-height: 100vh
+
     
-    header,
-    footer
+    header.top-bar,
+    footer.foo-bar
         flex: 0
 
     main.body
         flex: 1
+
+header.top-bar,
+.links
+    @extend .columns

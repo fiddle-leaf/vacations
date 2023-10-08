@@ -1,6 +1,6 @@
 import {
   Layout
-} from "/build/_shared/chunk-KXOYKH2B.js";
+} from "/build/_shared/chunk-6OBTWLAV.js";
 import {
   Outlet
 } from "/build/_shared/chunk-QB6BDX2D.js";
@@ -63,4 +63,4 @@ window.$RefreshSig$ = prevRefreshSig;
 export {
   Landing as default
 };
-//# sourceMappingURL=/build/routes/vacations-K2UVOAHW.js.map
+//# sourceMappingURL=/build/routes/vacations-UVYSSS7Y.js.map

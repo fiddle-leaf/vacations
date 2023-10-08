@@ -5,15 +5,23 @@
 body {
   box-sizing: border-box;
   margin-block: 0;
+  margin-inline: 0;
+}
+.columns,
+header.top-bar,
+.links {
+  display: flex;
+  gap: 1rem;
+  flex-flow: row wrap;
 }
 div.page {
   display: flex;
-  gap: 1rem;
+  gap: 0;
   flex-flow: column nowrap;
-  height: 100vh;
+  min-height: 100vh;
 }
-div.page header,
-div.page footer {
+div.page header.top-bar,
+div.page footer.foo-bar {
   flex: 0;
 }
 div.page main.body {
@@ -25,4 +33,11 @@ body {
 }
 body h1 {
   font-family: Red Rose, serif;
+}
+header.top-bar,
+footer.foo-bar {
+  background: #ccecf2;
+}
+aside.sidebar {
+  background: #e7f6f8;
 }
